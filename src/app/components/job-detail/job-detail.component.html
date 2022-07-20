@@ -1,0 +1,33 @@
+<div class="container more-info" >
+
+    <div class="info_header">
+        <div class="info_header_title">
+            <h3 class="">{{offer.name ? offer.name : "Unknown"}}</h3>
+            
+            <p class="">{{offer.levels[0] ? offer.levels[0].name : "Unknown"}}</p>
+            <button [routerLink]="['/company-info']" ><i class="fa-solid fa-circle-info"></i></button>
+       
+        </div>
+        <div class="info_header_company">
+            <div class="text">
+                <h4 class=""> {{offer.company.name ? offer.company.name : "Unknown"}} </h4>
+                <p class=""> {{offer.locations[0] ? offer.locations[0].name : "Unknown"}} </p>
+                <p class="" [innerHTML]="offer.contents"></p>
+            </div>
+            <div class="text">
+                <p></p>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <div class=" container description"  >
+      
+    </div>
+
+    <button type="button" class="btn btn-primary back-button" [routerLink]="['']">Close</button>
+
+</div>
+
+

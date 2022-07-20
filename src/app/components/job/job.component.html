@@ -1,0 +1,37 @@
+<div class="container content">
+  <div class=" filters">
+    <h4>Filters</h4>
+    <h6>Level:</h6>
+
+    <select #select id="level-select" class="form-select form-select-sm" aria-label=".form-select-sm example" (change)="levelChange(1)">
+      <option selected value="all">All</option>
+      <option value="Entry Level">Entry Level</option>
+      <option value="Mid Level">Mid Level</option>
+      <option value="Senior Level">Senior Level</option>
+      <option value="management">Management</option>
+      <option value="Internship">Internship</option>
+    </select>
+  </div>
+
+
+
+  <div #input class="job-offers">
+
+    <app-offer *ngFor="let offer of offersList" [offer]="offer"></app-offer>
+
+    <nav class="pages" aria-label="...">
+      <ul class="pagination">
+        <li class="page-item ">
+          <button class="page-link" style="width: 100px; text-align: center;" (click)="PreviousPage()">Previous</button>
+        </li>
+
+        <li class="page-item disabled"><a class="page-link" href="#">{{page}}</a></li>
+
+        <li class="page-item">
+          <button class="page-link" style="width: 100px; text-align: center;" (click)="NextPage()">Next</button>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
